@@ -75,37 +75,27 @@ git clone <https://github.com/yulti879/diplom>
 
 2. **Настройка бэкенда (Laravel)**
 
-- Переход в папку бэкенда
-cd ../backend
+- Переход в папку бэкенда - cd ../backend
 
-- Установка зависимостей
-composer install
+- Установка зависимостей  - composer install
 
-- Копирование файла окружения
-cp .env.example .env
+- Копирование файла окружения - cp .env.example .env
 
-- Генерация ключа приложения
-php artisan key:generate
+- Генерация ключа приложения - php artisan key:generate
 
-- Создание базы данных SQLite
-touch database/database.sqlite
+- Создание базы данных SQLite - touch database/database.sqlite
 
-- Миграции и сидеры
-php artisan migrate --seed
+- Миграции и сидеры - php artisan migrate --seed
 
-- Запуск бэкенда
-php artisan serve
+- Запуск бэкенда - php artisan serve
 
 3. **Настройка фронтенда (React)**
 
-- Переход в папку фронтенда
-cd ../frontend
+- Переход в папку фронтенда - cd ../frontend
 
-- Установка зависимостей
-npm install
+- Установка зависимостей - npm install
 
-- Запуск dev-сервера
-npm run dev
+- Запуск dev-сервера - npm run dev
 
 После выполнения этих шагов:
 
@@ -118,24 +108,24 @@ API endpoints: http://localhost:8000/api/*
 ## Детальная настройка
 
 ### Настройка базы данных
-По умолчанию используется SQLite. Для использования MySQL/PostgreSQL:
-Отредактируйте .env файл:
+По умолчанию используется SQLite.  
+Для использования MySQL/PostgreSQL:
+1. Отредактируйте .env файл:
 env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=cinema_booking
-DB_USERNAME=root
-DB_PASSWORD=
-Создайте базу данных и выполните миграции:
-php artisan migrate
+DB_CONNECTION=mysql  
+DB_HOST=127.0.0.1  
+DB_PORT=3306  
+DB_DATABASE=cinema_booking  
+DB_USERNAME=root  
+DB_PASSWORD=  
+2. Создайте базу данных и выполните миграции:  
+php artisan migrate  
 
 ### Административный доступ
-После выполнения сидов создается администратор:
-Email: admin@cinema.ru
-Пароль: admin123
-Для входа в админку перейдите по пути /admin
-
+После выполнения сидов создается администратор:  
+Email: admin@cinema.ru  
+Пароль: admin123  
+Для входа в админку перейдите по пути /admin  
 
 ## API Endpoints
 
@@ -181,16 +171,16 @@ GET /api/qr-code/booking/{code} - генерация QR-кода
 
 ## Миграции базы данных
 Проект включает следующие миграции:
-cinema_halls - кинозалы
-movies - фильмы
-screenings - сеансы
-bookings - бронирования
-users - пользователи
+- cinema_halls - кинозалы
+- movies - фильмы
+- screenings - сеансы
+- bookings - бронирования
+- users - пользователи
 
-Для выполнения миграций:
+Для выполнения миграций:  
 php artisan migrate
 
-Для отката:
+Для отката:  
 php artisan migrate:rollback
 
 
@@ -201,7 +191,7 @@ php artisan migrate:rollback
 Проверьте настройки в config/cors.php
 
 ### Проблемы с базой данных
-Проверьте права доступа к файлу БД (для SQLite)
+Проверьте права доступа к файлу БД (для SQLite)  
 Убедитесь, что миграции выполнены
 
 ### Проблемы с загрузкой постеров
