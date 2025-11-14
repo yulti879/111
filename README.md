@@ -130,21 +130,21 @@ Email: admin@cinema.ru
 ## API Endpoints
 
 ### Аутентификация
-POST /api/auth/login - вход в систему  
-POST /api/auth/logout - выход из системы  
-GET /api/auth/user - информация о пользователе  
+- POST /api/auth/login - вход в систему  
+- POST /api/auth/logout - выход из системы  
+- GET /api/auth/user - информация о пользователе  
 
 ### Основные ресурсы
-GET /api/cinema-halls - список залов  
-GET /api/movies - список фильмов  
-GET /api/screenings - расписание сеансов  
-POST /api/bookings - создание бронирования  
-GET /api/screenings/{id}/booked-seats - занятые места  
+- GET /api/cinema-halls - список залов  
+- GET /api/movies - список фильмов  
+- GET /api/screenings - расписание сеансов  
+- POST /api/bookings - создание бронирования  
+- GET /api/screenings/{id}/booked-seats - занятые места  
 
 ### Административные
-CRUD операции для залов, фильмов, сеансов  
-POST /api/upload-poster - загрузка постеров  
-GET /api/qr-code/booking/{code} - генерация QR-кода  
+- CRUD операции для залов, фильмов, сеансов  
+- POST /api/upload-poster - загрузка постеров  
+- GET /api/qr-code/booking/{code} - генерация QR-кода  
 
 ## Особенности реализации
 
@@ -177,12 +177,9 @@ GET /api/qr-code/booking/{code} - генерация QR-кода
 - bookings - бронирования
 - users - пользователи
 
-Для выполнения миграций:  
-php artisan migrate
+Для выполнения миграций: php artisan migrate
 
-Для отката:  
-php artisan migrate:rollback
-
+Для отката: php artisan migrate:rollback
 
 ## Решение проблем
 
