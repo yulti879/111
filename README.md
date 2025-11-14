@@ -130,21 +130,21 @@ Email: admin@cinema.ru
 ## API Endpoints
 
 ### Аутентификация
-POST /api/auth/login - вход в систему
-POST /api/auth/logout - выход из системы
-GET /api/auth/user - информация о пользователе
+POST /api/auth/login - вход в систему  
+POST /api/auth/logout - выход из системы  
+GET /api/auth/user - информация о пользователе  
 
 ### Основные ресурсы
-GET /api/cinema-halls - список залов
-GET /api/movies - список фильмов
-GET /api/screenings - расписание сеансов
-POST /api/bookings - создание бронирования
-GET /api/screenings/{id}/booked-seats - занятые места
+GET /api/cinema-halls - список залов  
+GET /api/movies - список фильмов  
+GET /api/screenings - расписание сеансов  
+POST /api/bookings - создание бронирования  
+GET /api/screenings/{id}/booked-seats - занятые места  
 
 ### Административные
-CRUD операции для залов, фильмов, сеансов
-POST /api/upload-poster - загрузка постеров
-GET /api/qr-code/booking/{code} - генерация QR-кода
+CRUD операции для залов, фильмов, сеансов  
+POST /api/upload-poster - загрузка постеров  
+GET /api/qr-code/booking/{code} - генерация QR-кода  
 
 ## Особенности реализации
 
@@ -187,15 +187,15 @@ php artisan migrate:rollback
 ## Решение проблем
 
 ### CORS ошибки
-Убедитесь, что фронтенд и бэкенд работают на правильных портах
-Проверьте настройки в config/cors.php
+Убедитесь, что фронтенд и бэкенд работают на правильных портах  
+Проверьте настройки в config/cors.php  
 
 ### Проблемы с базой данных
 Проверьте права доступа к файлу БД (для SQLite)  
-Убедитесь, что миграции выполнены
+Убедитесь, что миграции выполнены  
 
 ### Проблемы с загрузкой постеров
-Проверьте права на запись в папку frontend/public/images/posters/
+Проверьте права на запись в папку frontend/public/images/posters/  
 
 ## Логирование
 Логи приложения находятся в storage/logs/laravel.log
